@@ -40,7 +40,8 @@ setup(
         'ofxclient',
         'ofxparse>=0.16',
         'BeautifulSoup4',
-        'fuzzywuzzy'
+        'fuzzywuzzy',
+        'SecretStorage<3'
     ],
 
     extras_require={
