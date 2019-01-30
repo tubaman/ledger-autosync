@@ -72,7 +72,7 @@ def print_results(converter, ofx, ledger, txns, args):
                 not(ledger.check_transaction_by_id("ofxid", ALL_AUTOSYNC_INITIAL))):
             print converter.format_initial_balance(ofx.account.statement)
     for txn in txns:
-        print converter.convert(txn).format(args.indent)
+        print converter.convert(txn).format(args.indent).encode('utf-8')
     if args.assertions:
         print converter.format_balance(ofx.account.statement)
 
